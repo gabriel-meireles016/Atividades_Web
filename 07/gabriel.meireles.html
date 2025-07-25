@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR"></html>
+
+<head>
+	<meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Exercício	3 da disciplina ProgWeb">
+    <meta name="author" content="Gabriel Meireles">
+    <meta name="keywords" content="HTML, Exercício, ProgWeb">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>FormsJs - Meireles</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exercício 07 - Forms & Js</h1>
+    </header>
+
+    <section>
+        <h2>Formulário</h2>
+        <form>
+            <label for="rga">RGA:</label>
+            <span id="rgaErro">Preencha corretamente o RGA!</span>
+            <input type="text" id="rga" name="rga" pattern="[0-9]{4}.[0-9]{4}.[0-9]{3}-[0-9]{1}" onfocusout="validaRGA()" required>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" disabled>
+
+            <label for="senha">Defina uma Senha:</label>
+            <input type="password" id="senha" name="senha" onkeyup="validaSenha()" required>
+            <span id="senhaErro">As duas senhas devem ser iguais e não podem ser vazias.</span>
+
+            <label for="confirmaSenha">Confirme a Senha:</label>
+            <input type="password" id="confirmaSenha" name="confirmaSenha" onfocusout="validaSenhaFormato()" required>
+
+            <fieldset>
+                <legend>Tipo de Permissão</legend>
+                <input type="radio" id="estudante" name="tipo" value="estudante" checked>
+                <label for="estudante">Estudante</label>
+                <input type="radio" id="monitor" name="tipo" value="monitor" value="monitor" checked>
+                <label for="monitor">Monitor</label>
+                <input type="radio" id="ouvinte" name="tipo" value="ouvinte" value="monitor" checked>
+                <label for="ouvinte">Ouvinte</label>
+            </fieldset>
+
+            <label for="data">Data: </label>
+            <span id="dataErro">A data de início deve ser posterior a data de hoje.</span>
+            <input type="date" id="data" onfocusout="validaData()" required>
+
+            <input type="submit">
+            
+            
+            <ul>
+                <li id="senhaValidaTamanho">Entre 6 e 15 caracteres.</li>
+                <li id="senhaValidaMinuscula">Pelo menos uma letra minúscula.</li>
+                <li id="senhaValidaMaiuscula">Pelo menos uma letra maiúscula.</li>
+                <li id="senhaValidaNumero">Pelo menos um número.</li>
+                <li id="senhaValidaEspeciais">No mínimo dois caracteres especiais.</li>
+            </ul>
+
+        </form>
+    </section>
+
+</body>
+
+</html>

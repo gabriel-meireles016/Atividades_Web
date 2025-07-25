@@ -1,0 +1,68 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "perfil academica competencias"
+        "perfil profissional footer";
+}
+
+header{
+    grid-area: header;
+    justify-content: center;
+    background-color: #A9A9A9;
+    display: flex;
+    border-radius: 5px 25px 5px 25px;
+}
+
+section, footer{
+    border-radius: 5px 25px 5px 25px;
+    background-color: #D3D3D3;
+}
+
+section#perfil{
+    grid-area: perfil;
+    padding: 5%;
+}
+
+section#academica{
+    grid-area: academica;
+    padding: 5%;
+}
+
+section#competencias{
+    grid-area: competencias;
+    padding: 5%;
+}
+
+section#profissional{
+    grid-area: profissional;
+    padding: 5%;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.foto img{
+    display: inline;
+    width: 130px;
+    height: 150px;
+    border-radius: 5px 25px 5px 25px;
+}
+
+.foto, .nome{
+    display: flex;
+    justify-content: left;
+    place-self: center;
+    padding: 15px;
+}
